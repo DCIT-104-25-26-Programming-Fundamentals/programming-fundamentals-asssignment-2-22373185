@@ -51,7 +51,63 @@
 
 //
 // =============================================================================
-// YOUR CODE BELOW — remove the // symbols from the scaffold and fill it in
+#include <iostream>
+using namespace std;
+
+
+void singleTable()
+{
+    int number;
+
+    cout << "Enter a number: ";
+    cin >> number;
+
+    cout << "\nMultiplication Table for " << number << ":\n";
+
+    for (int i = 1; i <= 12; i++)
+    {
+        cout << number << " x " << i << " = " << number * i << endl;
+    }
+}
+
+
+void multipleTables()
+{
+    int N;
+
+    cout << "\nEnter a positive integer (N): ";
+    cin >> N;
+
+    if (N <= 0)
+    {
+        cout << "Error: N must be a positive integer." << endl;
+        return;
+    }
+
+    for (int table = 1; table <= N; table++)
+    {
+        cout << "\nMultiplication Table for " << table << ":\n";
+
+        for (int i = 1; i <= 12; i++)
+        {
+            cout << table << " x " << i << " = " << table * i << endl;
+        }
+
+        cout << "---------------------------" << endl;
+    }
+}
+
+int main()
+{
+    
+    singleTable();
+
+    
+    multipleTables();
+
+    return 0;
+}
+
 // =============================================================================
 
 #include <iostream>
